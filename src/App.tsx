@@ -34,7 +34,11 @@ function App() {
       <form onSubmit={handleSubmit}>
         <label>
           What topic do you want to get the amount for?
-          <input type="text" name="topic" value={topic} onChange={(e) => setTopic(e.target.value)} />
+          <input type="text" name="topic" value={topic} onChange={(e) => {
+            setTopic(e.target.value);
+            setMentions(null);
+          }
+          } />
         </label>
         <button type="submit">Get amount</button>
 
