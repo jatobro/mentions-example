@@ -8,8 +8,8 @@ function App() {
 
   const handleFetchMentions = (e: React.FormEvent) => {
     e.preventDefault();
-    getMentions(topic)
-  }
+    getMentions(topic);
+  };
 
   return (
     <div className="form-container">
@@ -19,14 +19,14 @@ function App() {
         </label>
         <input
           id="topic-input"
-          type="text" name="topic"
+          type="text"
+          name="topic"
           value={topic}
           onChange={(e) => setTopic(e.target.value)}
         />
         <button type="submit">Get mentions</button>
       </form>
-      {isLoading ? <p>Loading...</p>
-        : (<p>{mentions.count ?? ""}</p>)}
+      {isLoading ? <p>Loading...</p> : <p>{mentions.count ?? ""}</p>}
     </div>
   );
 }
