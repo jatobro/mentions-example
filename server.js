@@ -1,7 +1,6 @@
 const port = 8000
 
 const express = require('express')
-require('dotenv').config()
 const axios = require('axios')
 const app = express()
 const cors = require('cors')
@@ -14,7 +13,7 @@ app.get('/:topic', (req, res) => {
 
 	const options = {
 		method: 'GET',
-		url: `${process.env.TOPIC_API}${topic}`
+		url: `https://en.wikipedia.org/w/api.php?action=parse&section=0&prop=text&format=json&page=${topic}`
 	};
 
 	axios.request(options).then((response) => {
