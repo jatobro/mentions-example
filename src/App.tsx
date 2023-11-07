@@ -2,7 +2,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [topic, setTopic] = useState<string>("");
+  const [topic, setTopic] = useState("");
   const [mentions, setMentions] = useState<number | null>(null);
 
   const handleFetchMentions = async (e: React.FormEvent) => {
