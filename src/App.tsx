@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="form-container">
       <form onSubmit={handleFetchMentions}>
-        <label htmlFor="topic-input">What topic do you want to get the amount for?</label>
+        <label htmlFor="topic-input">What topic do you want to get the amount of mentions for?</label>
         <input id="topic-input" type="text" name="topic" value={topic} onChange={(e) => {
           setTopic(e.target.value);
           setMentions(null);
