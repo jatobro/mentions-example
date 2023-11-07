@@ -8,7 +8,7 @@ app.use(cors())
 
 app.listen(port, () => console.log(`Server is running on ${port}`))
 
-app.get('/:topic', (req, res) => {
+app.get('/mentions/:topic', (req, res) => {
 	const topic = req.params.topic;
 
 	const options = {

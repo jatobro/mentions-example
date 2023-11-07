@@ -9,7 +9,7 @@ function App() {
   const handleFetchMentions = async (e: React.FormEvent) => {
     e.preventDefault(); // makes page not refresh
 
-    fetch(`http://localhost:8000/${topic}`)
+    fetch(`http://localhost:8000/mentions/${topic}`)
       .then(response => response.json())
       .then(data => setMentions(data.mentions))
       .catch((error) => console.log(error))
