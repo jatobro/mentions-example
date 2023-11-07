@@ -6,7 +6,7 @@ function App() {
   const [mentions, setMentions] = useState<number | null>(null);
 
   const handleFetchMentions = async (e: React.FormEvent) => {
-    e.preventDefault(); // makes page not refresh
+    e.preventDefault();
 
     fetch(`http://localhost:8000/mentions/${topic}`)
       .then(response => response.json())
