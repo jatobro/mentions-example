@@ -2,10 +2,9 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [topic, setTopic] = useState<string>(""); // the topic that the user wants information of
-  const [mentions, setMentions] = useState<number | null>(null); // the result of the fetching, the number of mentions of the current topic
+  const [topic, setTopic] = useState<string>("");
+  const [mentions, setMentions] = useState<number | null>(null);
 
-  // function that handles the submission of the form, fetches data and calculates mentions
   const handleFetchMentions = async (e: React.FormEvent) => {
     e.preventDefault(); // makes page not refresh
 
@@ -15,7 +14,6 @@ function App() {
       .catch((error) => console.log(error))
   }
 
-  // form with input and p that continuously update based on state variables
   return (
     <div className="form-container">
       <form onSubmit={handleFetchMentions}>
