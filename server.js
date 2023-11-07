@@ -22,7 +22,7 @@ app.get('/mentions/:topic', (req, res) => {
 
 		res.json({
 			topic: topic,
-			mentions: (text.match(regex) || []).length
+			count: (text.match(regex) || []).length
 		});
 	}).catch((error) => console.log(error));
 })
