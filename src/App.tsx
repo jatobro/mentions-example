@@ -32,14 +32,12 @@ function App() {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <label>
-          What topic do you want to get the amount for?
-          <input type="text" name="topic" value={topic} onChange={(e) => {
-            setTopic(e.target.value);
-            setMentions(null);
-          }
-          } />
-        </label>
+        <label htmlFor="topic-input">What topic do you want to get the amount for?</label>
+        <input id="topic-input" type="text" name="topic" value={topic} onChange={(e) => {
+          setTopic(e.target.value);
+          setMentions(null);
+        }
+        } />
         <button type="submit">Get amount</button>
 
       </form>
