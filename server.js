@@ -6,6 +6,8 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 
+require("dotenv").config();
+
 app.listen(port, () => console.log(`Server is running on ${port}`));
 
 app.get("/mentions/:topic", (req, res) => {
@@ -13,7 +15,7 @@ app.get("/mentions/:topic", (req, res) => {
 
   const options = {
     method: "GET",
-    url: `https://en.wikipedia.org/w/api.php?action=parse&section=0&prop=text&format=json&page=${topic}`,
+    url: `${process.env.WIKI_TOPIC_API}${topic}`,
   };
 
   axios
