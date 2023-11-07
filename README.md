@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm run start:backend`
 
-Runs the backend express server API that the app functionality relies on.
+Runs the backend express server API that the app functionality relies on.\
 Runs on http://localhost:8000
 
 ### `npm start`
