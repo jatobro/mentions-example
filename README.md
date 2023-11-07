@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\\
+To run the app, you need to save .env-example as .env and fill in the environment variables listed.\
+You also need to use the scripts below to run both backend and frontend.
 
 ## Available Scripts
 
