@@ -3,14 +3,11 @@ import { fetchMentions } from "../api/fetchMentions";
 
 type Mentions = {
   topic: string;
-  count: number | null;
+  count: number;
 };
 
 export const useGetMentions = () => {
-  const [mentions, setMentions] = useState<Mentions>({
-    topic: "",
-    count: null,
-  });
+  const [mentions, setMentions] = useState<Mentions>();
   const [isLoading, setIsLoading] = useState(false);
 
   const getMentions = (topic: string) => {

@@ -20,13 +20,12 @@ function App() {
         <input
           id="topic-input"
           type="text"
-          name="topic"
           value={topic}
           onChange={(e) => setTopic(e.target.value)}
         />
         <button type="submit">Get mentions</button>
       </form>
-      {isLoading ? <p>Loading...</p> : <p>{mentions.count ?? ""}</p>}
+      <p>{isLoading ? "Loading..." : mentions?.count}</p>
     </div>
   );
 }
