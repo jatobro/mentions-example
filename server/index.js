@@ -1,5 +1,3 @@
-const port = 8000;
-
 const express = require("express");
 const axios = require("axios");
 const app = express();
@@ -8,9 +6,11 @@ app.use(cors());
 
 require("dotenv").config();
 
+const port = process.env.PORT || 3001;
+
 app.listen(port, () => console.log(`Server is running on ${port}`));
 
-app.get("/mentions/:topic", (req, res) => {
+app.get("/api/mentions/:topic", (req, res) => {
   const topic = req.params.topic;
 
   const options = {
