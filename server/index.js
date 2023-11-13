@@ -1,7 +1,8 @@
-const express = require("express");
-const axios = require("axios");
+import express from "express";
+import cors from "cors";
+import { request } from "axios";
+
 const app = express();
-const cors = require("cors");
 app.use(cors());
 
 require("dotenv").config();
@@ -18,8 +19,7 @@ app.get("/api/mentions/:topic", (req, res) => {
     url: `${process.env.WIKI_TOPIC_API}${topic}`,
   };
 
-  axios
-    .request(options)
+  request(options)
     .then((response) => {
       const text = response.data.parse.text["*"];
       const regex = new RegExp(topic, "gi");
