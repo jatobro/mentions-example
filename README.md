@@ -1,4 +1,4 @@
-# Vipps Internship Assignment Option 1
+# Get mentions from Wikipedia API
 
 ## How to run
 
